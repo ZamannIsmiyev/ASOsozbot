@@ -10,11 +10,11 @@ from helpers.game import new_game
 from helpers.wrappers import nice_errors
 
 
-@nice_errors
+@ASOresmi
 def callback(update: Update, context: CallbackContext):
     new_game(update.effective_user, context)
     db.update(update.effective_chat.id, update.effective_chat.title)
-    update.effective_message.reply_text( BU BOT @ReislerSupport Tarafından yapılmıştır.)
+    update.effective_message.reply_text( BU BOT @ismiyev95 Tarafından yapılmıştır.)
         f'{update.effective_user.mention_html()} talks about a word.',
         reply_markup=InlineKeyboardMarkup(
             [
