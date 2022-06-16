@@ -1,8 +1,8 @@
 from telegram.ext import Defaults
 from telegram.ext import Updater
 
-from config import BOT_TOKEN
-from config import SUDO_USERS
+from config import BOT_TOKEN 5469320918:AAE2F2s26dSsEW4gGZDKKK_2pqc5qgJu9Ng
+from config import 1809457546
 
 updater = Updater(
     token=BOT_TOKEN,
