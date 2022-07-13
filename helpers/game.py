@@ -64,27 +64,27 @@ def new_game(host: User, context: CallbackContext) -> bool:
 
 @requires_game_running
 def get_game(context: CallbackContext) -> dict:
-    return context.chat_data['game']
+    return context.chat_data['oyun']
 
 
 @requires_game_running
 def next_word(context: CallbackContext) -> str:
-    context.chat_data['game']['word'] = choice()
-    return context.chat_data['game']['word']
+    context.chat_data['oyun']['word'] = choice()
+    return context.chat_data['oyun']['word']
 
 
 @requires_game_running
 def is_true(word: str, context: CallbackContext) -> bool:
-    if context.chat_data['game']['word'] == word.lower():
+    if context.chat_data['oyun']['word'] == word.lower():
         end_game(context)
         return True
     return False
 
 
 def end_game(context: CallbackContext) -> bool:
-    if 'game' in context.chat_data:
+    if 'oyun' in context.chat_data:
         try:
-            del context.chat_data['game']
+            del context.chat_data['oyun']
             return True
         except Exception as e:
             raise e
