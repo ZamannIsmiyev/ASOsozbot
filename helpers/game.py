@@ -20,7 +20,7 @@ def make_sure_in_game(context: CallbackContext) -> bool:
 
 
 def make_sure_not_in_game(context: CallbackContext) -> bool:
-    game = context.chat_data.get('oyun')
+    game = context.chat_data.get('oyun') 
 
     if game:
         if (time() - game['start']) >= 300:
