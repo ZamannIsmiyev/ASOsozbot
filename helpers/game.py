@@ -7,7 +7,7 @@ from words import choice
 
 
 def make_sure_in_game(context: CallbackContext) -> bool:
-    game = context.chat_data.get('game')
+    game = context.chat_data.get('oyun')
 
     if game:
         if (time() - game['start']) >= 300:
@@ -20,7 +20,7 @@ def make_sure_in_game(context: CallbackContext) -> bool:
 
 
 def make_sure_not_in_game(context: CallbackContext) -> bool:
-    game = context.chat_data.get('game')
+    game = context.chat_data.get('oyun')
 
     if game:
         if (time() - game['start']) >= 300:
@@ -54,7 +54,7 @@ def requires_game_not_running(func):
 
 @requires_game_not_running
 def new_game(host: User, context: CallbackContext) -> bool:
-    context.chat_data['game'] = {
+    context.chat_data['oyun'] = {
         'start': time(),
         'host': host,
         'word': choice(),
