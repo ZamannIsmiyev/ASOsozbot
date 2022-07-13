@@ -1,7 +1,7 @@
 from telegram.ext import Defaults
 from telegram.ext import Updater
 
-from config import BOT_TOKEN 5469320918:AAE2F2s26dSsEW4gGZDKKK_2pqc5qgJu9Ng
+from config import BOT_TOKEN 5509121112:AAE3XG5Rrq1v-B1NAG1ThV6oZHUEJx1v1bA
 from config import 1809457546
 
 updater = Updater(
