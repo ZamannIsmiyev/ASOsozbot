@@ -2,7 +2,7 @@
 
 #### A word-based Telegram game bot.
 
-Official hosted bot: [@ReislerKelimebot](https://t.me/ReislerKelimeBot).
+Official hosted bot: [@ASOsozutap_bot](https://t.me/ASOsozutap_bot).
 
 ## Deploying your own
 
